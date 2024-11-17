@@ -34,7 +34,9 @@ function FeatureCards() {
             className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition duration-200"
           >
             <div className="mb-4 flex justify-center">
-              {feature.icon}
+              <div className="transition duration-200 hover:text-red-500 hover:bg-red-100 p-2 rounded-full">
+                {feature.icon}
+              </div>
             </div>
             <h3 className="text-xl font-semibold text-gray-800">{feature.title}</h3>
             <p className="text-gray-600 mt-2">{feature.description}</p>

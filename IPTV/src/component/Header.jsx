@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -8,7 +9,7 @@ function Header() {
   };
 
   return (
-    <nav className="bg-transparent  relative">
+    <nav className="bg-white relative">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <div className="flex items-center">
           {/* Logo */}
@@ -31,13 +32,13 @@ function Header() {
 
         {/* Navigation Links for large screens */}
         <div className="hidden md:flex space-x-6 text-gray-800 font-medium">
-          <a href="#" className="hover:text-orange-500 transition duration-200">Home</a>
-          <a href="#" className="hover:text-orange-500 transition duration-200">Pricing</a>
-          <a href="#" className="hover:text-orange-500 transition duration-200">Installation Guide</a>
-          <a href="#" className="hover:text-orange-500 transition duration-200">Blogs</a>
-          <a href="#" className="hover:text-orange-500 transition duration-200">Contact Us</a>
-          <a href="#" className="hover:text-orange-500 transition duration-200">Account</a>
-          <a href="#" className="hover:text-orange-500 transition duration-200">Free Trial</a>
+          <Link to="/" className="hover:text-orange-500 transition duration-200">Home</Link>
+          <Link to="/pricing" className="hover:text-orange-500 transition duration-200">Pricing</Link>
+          <a href="https://primehdstream.com/index.php?rp=/knowledgebase/1/How-to-setup-our-Service-in-your-device" className="hover:text-orange-500 transition duration-200">Installation Guide</a>
+          
+          <Link to="/form" className="hover:text-orange-500 transition duration-200">Contact Us</Link>
+        
+          <a href="https://primehdstream.com/cart.php?a=confproduct&i=0" className="hover:text-orange-500 transition duration-200">Free Trial</a>
         </div>
       </div>
 

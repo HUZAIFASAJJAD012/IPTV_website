@@ -2,12 +2,16 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0b1d36] text-white py-10">
-      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-[#0b1d36] text-white py-10 w-[100%] ">
+      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-4  gap-8">
         
         {/* Logo and Description */}
         <div className="flex flex-col items-start">
-          <img src="/path-to-your-logo.png" alt="4K Live IPTV" className="w-20 h-20 mb-4" />
+        <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-500">
+            <span className="text-4xl">4K</span>
+            <span className="text-orange-500 text-sm ml-1">LIVE</span> 
+            <span className="text-gray-500 text-xs">IPTV</span>
+          </div>
           <p className="text-sm leading-relaxed">
             Our 4K Live IPTV service promises a fresh, immersive experience, delivering a seamless blend of quality, variety, and innovation.
           </p>

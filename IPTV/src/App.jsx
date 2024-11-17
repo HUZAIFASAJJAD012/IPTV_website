@@ -1,28 +1,32 @@
 
 import './App.css'
-import FAQSection from './component/FAQSection'
-import FeatureCards from './component/FeatureCards'
-import Footer from './component/Footer'
-import Header from './component/Header'
-import HeroSection from './component/HeroSection'
-import PremiumFeaturesSection from './component/PremiumFeaturesSection'
-import PricingPage from './component/PricingPage'
-import PromoBanner from './component/PromoBanner'
-import SubscriptionSection from './component/SubscriptionSection'
+import { Homepage } from './component/Homepage'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PricingPage2 from './component/PricingPage2';
+import Header from './component/Header';
+import Footer from './component/Footer';
+import GmailContactForm from './component/ContactForm';
+import ContactForm from './component/ContactForm';
 
 function App() {
 
   return (
     <>
-     <Header/>
-     <HeroSection/>
-     <PricingPage/>
-     <FeatureCards/>
-     <SubscriptionSection/>
-     <PremiumFeaturesSection/>
-     <FAQSection/>
-     <PromoBanner/>
-     <Footer/>
+
+   <Router>
+   <Header/>
+      <Routes>
+        {/* Homepage Route */}
+        <Route path="/" element={<Homepage />} />
+        {/* Pricing Page Route */}
+        <Route path="/pricing" element={<PricingPage2 />} />
+        <Route path="/form" element={<ContactForm/>} />
+
+
+      </Routes>
+      <Footer/>
+
+    </Router>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import img1 from "../assets/77.png"
 function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -27,7 +27,7 @@ function FAQSection() {
   ];
 
   return (
-    <section className="bg-white py-16 px-4 md:px-20 flex flex-col md:flex-row items-center">
+    <section className="bg-white py-16 px-4 md:px-20 flex flex-col md:flex-row items-center space-x-[20%]">
       {/* FAQ Text Section */}
       <div className="max-w-lg w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Frequently Asked Questions</h2>
@@ -59,7 +59,7 @@ function FAQSection() {
 
       {/* FAQ Image */}
       <div className="mt-10 md:mt-0 md:ml-10">
-        <img src={"faqImage"} alt="FAQ illustration" className="w-full max-w-xs" />
+        <img src={img1} alt="FAQ illustration" className="w-full max-w-xs" />
       </div>
     </section>
   );
